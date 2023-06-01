@@ -110,6 +110,8 @@ plugins:
   #- blog
   # Table of contents keeps the formating (icons, underline etc)
   #- typeset
+  # Image tools
+  - glightbox
 
 
   # Revision date info for GitHub repos TODO: uncomment if repo

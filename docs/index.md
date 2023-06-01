@@ -2,7 +2,10 @@
 
 # Linux monitoring
 
-!!! warning "Missing picture"
+<figure markdown>
+  ![Screenshot](img/screenshot.png){ loading=lazy }
+  <figcaption>Screenshot of normal operation</figcaption>
+</figure>
 
 [Demo](https://frolov.eu/monitoring/){ .md-button .md-button--primary }
 [Download](https://github.com/FlagHunter01/linux-monitoring/releases){ .md-button }
