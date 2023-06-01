@@ -1,3 +1,5 @@
+[![ci](https://github.com/FlagHunter01/linux-monitoring/actions/workflows/ci.yml/badge.svg?branch=website)](https://github.com/FlagHunter01/linux-monitoring/actions/workflows/ci.yml)
+
 # Welcome to MkDocs
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
