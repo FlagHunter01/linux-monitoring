@@ -27,7 +27,7 @@ You should see a window with 3 indications with their associated graphs:
  - Memory shows the memory useage
  - Disk shows the proportion of used disk space (not the *idle* proportion like for the processor)
 
-The value is the latest measured metric. 
+The value is the latest measured metric (-1 means the last measure failed). 
 
 The graph shows the history for the last hour. If a part of it is grayed out, it means that data wasn't avalible at this time (the machine was down for example). 
 
