@@ -30,7 +30,7 @@ theme:
 
   #logo: assets/logo.png
   icon:
-    logo: :material-chart-histogram:
+    logo: material/chart-histogram
   #favicon: assets/logo.png
 
   palette:
