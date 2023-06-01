@@ -95,8 +95,8 @@ theme:
     - content.tabs.link
     # Better tooltips
     - content.tooltips
-    # Link to source code
-    - content.action.edit
+    # Link to source code TODO: comment if help not wanted
+    #- content.action.edit
 
 
 plugins:
