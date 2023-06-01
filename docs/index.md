@@ -1,19 +1,18 @@
 [![ci](https://github.com/FlagHunter01/linux-monitoring/actions/workflows/ci.yml/badge.svg?branch=website)](https://github.com/FlagHunter01/linux-monitoring/actions/workflows/ci.yml)
 
-# Welcome to MkDocs
+# Linux monitoring
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+!!! warning "Missing picture"
 
-## Commands
+[Demo](https://frolov.eu/monitoring/) { .md-button .md-button--primary }
+[Download](https://github.com/FlagHunter01/linux-monitoring/releases) { .md-button }
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Objective
 
-## Project layout
+This script monitors processor, memory and disk useage and displays them in a web interface. 
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+It aims to mimic the "Performance" tab of Windows Task Manager in a simplistic way, with the history going back one hour instead of one minute. 
+
+## Limitations
+
+This project has only been tested on Debian. Other flavors might need some tweaking. 
