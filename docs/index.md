@@ -4,8 +4,8 @@
 
 !!! warning "Missing picture"
 
-[Demo](https://frolov.eu/monitoring/) { .md-button .md-button--primary }
-[Download](https://github.com/FlagHunter01/linux-monitoring/releases) { .md-button }
+[Demo](https://frolov.eu/monitoring/){ .md-button .md-button--primary }
+[Download](https://github.com/FlagHunter01/linux-monitoring/releases){ .md-button }
 
 ## Objective
 
