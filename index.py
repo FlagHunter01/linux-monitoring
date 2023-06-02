@@ -3,6 +3,14 @@
 import time
 from enum import IntEnum
 
+### Customisation ###
+
+# File containing the measures
+database = "measures"
+# URL of the "home" button
+url = "http://localhost"
+# Displayed program version
+version = "Version 1.1"
 
 ### Definitions ###
 
@@ -13,8 +21,7 @@ class Type(IntEnum):
     memory = 2
     disk = 3
 
-# File containing the measures
-database = "measures"
+
 # Index of the measure inside the displayed array
 index = 0
 # Quantity of measures read from file
@@ -23,8 +30,6 @@ measures_quantity = 0
 no_data = -1
 # Error message
 error = ""
-# Software version
-version = "Version 1.0"
 # Lists of values that will be displayed
 processor = [no_data]*60
 memory = [no_data]*60
@@ -138,7 +143,7 @@ print('''
         <div class="window_header">
         ''' + version + '''<span style="color: red;">''' + error + '''</span>
             <button class="reload_button" onClick="window.location.reload(true)"><b class="reload">&#8634;</b></button>
-            <button class="home_button"><a href="https://frolov.eu"><b class="reload">&#x2302;</b></a></button>
+            <button class="home_button"><a href="''' + url + '''"><b class="reload">&#x2302;</b></a></button>
         </div>
         <div class="window_content">
             <div class="metric">
