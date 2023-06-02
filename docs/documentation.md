@@ -40,10 +40,25 @@ Next, open your crontab (`etc/crontab`) and add the script to be executed every 
 
 Copy `index.py` and `style.css` into the **Directory** and make `index.py` executeable.
 
-If needed, change the file name in `index.py`:
+### Customization
 
-```py title="index.py" linenums="17"
+Three variables have been moved to the top of the file to be easily customizable:
+
+```py title="Database path" linenums="6"
+### Customisation ###
+
+# File containing the measures
 database = "measures"
+```
+
+```py title="Target of the 'home' button" linenums="10"
+# URL of the "home" button
+url = "http://localhost"
+```
+
+```py title="Displayed version" linenums="12"
+# Displayed program version
+version = "Version 1.1"
 ```
 
 ## Apache configuration
@@ -75,6 +90,6 @@ systemstl reload apache2
 ```
 
 !!! success "Check"
-    The web interface should be availible at https://localhost/**Directory**.
+    The web interface should be availible at http://localhost/**Directory**.
 
 
