@@ -15,25 +15,16 @@ repo_name: FlagHunter01/linux-monitoring
 # URL of docs folder FIXME: comment if help not wanted!
 #edit_uri: edit/main/docs/
 
-
-
 nav:
     - Home: index.md
     - Documentation: documentation.md
 
-
 theme:
+  # Material theme
   name: material
-
-  # 1 per project (HTML5 limitation)
-  language: en
-
-  #logo: assets/logo.png
-  icon:
-    logo: material/chart-histogram
-  #favicon: assets/logo.png
-
+  # Colors
   palette:
+
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
       toggle:
@@ -42,149 +33,126 @@ theme:
 
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: red
+      scheme: default 
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
+      #primary: indigo
+      #accent: indigo
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal
-      accent: amber
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
-
-
+      #primary: indigo
+      #accent: indigo
+  # Font
   font:
     text: Roboto
     code: Roboto Mono
-
-
+  # Language TODO: customize
+  language: en
+  # Logo / icons TODO: custimize
+  #logo: assets/logo.png
+  icon:
+    logo: material/chart-histogram
+  #favicon: images/favicon.png
   features:
-    # Copy to clipboard button in code blocks
-    - content.code.copy
-    # Next and previous buttons in footer
-    - navigation.footer
-    # Monopage architecture (TODO: does it work?)
+    # Monopage (?)
     - navigation.instant
-    # Update URL with current anchor
+    # Start loading when link is hovered
+    - navigation.instant.prefetch
+    # Progress bar
+    - navigation.instant.progress
+    # Update URL with anchor
     - navigation.tracking
-    # Show tabs in the top menu
+    # Top menu tabs
     - navigation.tabs
-    # Show tabs in the left menu
-    - navigation.sections
-    # Auto-expand left menu
-    - navigation.expand
-    # Breadcrumbs displayed on top of the page
+    # Breadcrumbs
     - navigation.path
-    # First page of section serves as a preview (https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages)
+    # Avoid loading hidden nav and save 33% of build size (can't show folded sections, redirects to first page of the section instead)
+    #- navigation.prune
+    # Section overview pages
     - navigation.indexes
-    # Autoscroll menus so the current page is allways visible
+    # Anchor following
     - toc.follow
     # Back to top button
     - navigation.top
-    # Search auto completion
+    # Search suggestion
     - search.suggest
-    # Hightlight search results
+    # Search highlight
     - search.highlight
-    # Link content tabs togeather across the page
+    # Search sharing
+    #- search.share
+    # Footer nav 
+    - navigation.footer
+    # Keep content tab choice synchronised
     - content.tabs.link
-    # Better tooltips
-    - content.tooltips
-    # Link to source code TODO: comment if help not wanted
+    # Edit the page on git TODO: uncomment if needed
     #- content.action.edit
-
+    #- content.action.view
 
 plugins:
-  # Self-host all ressources aka fonts, icons etc (RGPD)
-  #- privacy
-  # Client side search
+  # Download external dependancies
+  - privacy
+  # Search
   - search
-  # Social cards - previews on social networks. Can't figure it out for Windows yet.
-  - social
-  # Blog. Required arborescence: https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/#built-in-blog-plugin
+  # Social cards
+  #- social
+  # Blog
   #- blog
-  # Table of contents keeps the formating (icons, underline etc)
-  #- typeset
-  # Image tools
-  - glightbox
-
-
-  # Revision date info for GitHub repos TODO: uncomment if repo
+  # RSS TODO: uncomment if needed
+  #- rss:
+  #    match_path: blog/posts/.* 
+  #    date_from_meta:
+  #      as_creation: date
+  #    categories:
+  #      - categories
+  #      - tags
+  # Git commiters TODO: uncomment if needed and customize
+  - git-committers:
+      repository: FlagHunter01/linux-monitoring
+      branch: website
+  # Git dates of file TODO: uncomment if needed
   - git-revision-date-localized:
       enable_creation_date: true
-      #fallback_to_build_date: true
-  - git-committers:
-      repository: FlagHunter01/school
-      branch: main
-  #- git-authors
-  # Optimize for offline use
+  # Optimize build
+  #- optimize
+  # Offline optimization
   #- offline
 
-
-extra:
-  # Page status that can be displayed
-  #status:
-  #  new: New
-  #  deprecated: Deprecated
-  # Social links in the footer
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/flaghunter01/
-  # Main logo link URL. site_url by default
-  #homepage: site_url
-
-
-  # Multiple languages support
-  #alternate:
-  #   - name: English
-  #     link: /en/
-  #     lang: en
-  #   - name: Français
-  #     link: /fr/
-  #     lang: fr
-
 markdown_extensions:
-  # Support for admonitions
+
+  # Python Markdown
+  - abbr
   - admonition
-  # Annotations, grids, buttons, tooltips, colored icons, image alignment and lazy images
   - attr_list
-  # Add footnotes
+  - def_list
   - footnotes
-  # Allows the useagse of HTML
   - md_in_html
-  # Generates tables of content.
   - toc:
-      # Visible anchor
-      permalink: ⚓︎
-  # Draw tables
-  - tables
-  # Underline and superscript
+      permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
   - pymdownx.caret
-  # Hightlight
-  - pymdownx.mark
-  # Subscript and deleted
-  - pymdownx.tilde
-  # make admonitions colabseable
   - pymdownx.details
-  # Emoji support
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-  # Highlight code blocks
-  - pymdownx.highlight:
-      anchor_linenums: true
-  # Nesting of just about everything
-  - pymdownx.superfences
-  # Draw keys
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
   - pymdownx.keys
-  # Separate content into different tabs
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
-  # Taxk lists
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.tilde
