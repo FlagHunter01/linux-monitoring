@@ -19,7 +19,7 @@ its path will be needend through this process.
 ## System data collection
 
 Data collection is done by `script.sh`. 
-Give it to a user that can write to the **Directory** and memorize the scripts path.
+Make it executeable and give it to a user who can write to the **Directory** and memorize the scripts path.
 
 Open the file and customize the **Directory** to your liking.
 
