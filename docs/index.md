@@ -1,3 +1,8 @@
+---
+title: Linux Monitoring
+description: A small script for monitoring and web display
+---
+
 [![ci](https://github.com/FlagHunter01/linux-monitoring/actions/workflows/ci.yml/badge.svg?branch=website)](https://github.com/FlagHunter01/linux-monitoring/actions/workflows/ci.yml)
 
 # Linux monitoring

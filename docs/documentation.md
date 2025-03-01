@@ -1,3 +1,8 @@
+---
+title: Documentation
+description: Documentation for the monitoring project
+---
+
 # Documentation
 
 ## Prerequisites
