@@ -100,7 +100,7 @@ plugins:
   # Search
   - search
   # Social cards
-  #- social
+  - social
   # Blog
   #- blog
   # RSS TODO: uncomment if needed
