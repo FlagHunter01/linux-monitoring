@@ -119,9 +119,9 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
   # Optimize build
-  #- optimize
+  - optimize
   # Offline optimization
-  #- offline
+  - offline
 
 markdown_extensions:
 
