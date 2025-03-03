@@ -42,4 +42,4 @@ The graph shows the history for the last hour. If a part of it is grayed out, it
 in the header part of the window, you can see the version number, an error message in red (when there is a problem) and two buttons.
 
  - The home button is a link to another page
- - The arrow button refreshes the page so you could see the latest data.
+ - The arrow button refreshes the page so you could see the latest data
